@@ -5,9 +5,10 @@
 React, Node, Express, Gemini AI
 
 ### API
+
    
-    Method | API | Request | Response 
-   --- | --- | --- | --- |
+ Method | API | Request | Response 
+--- | --- | --- | --- |
    POST | /api/upload | form-data with single csv file | SUCCESS if file is saved on the backend side
    GET | /api/analyze | - | GoogleGenerativeAI response on successful analyse
 
