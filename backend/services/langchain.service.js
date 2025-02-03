@@ -43,7 +43,7 @@ const analyzeWithLangChain = async (keywords) => {
         return response;
     } catch (error) {
         console.error("Error analyzing with LLM:", error);
-        return "Error in analysis.";
+        return "error";
     }
 };
 
