@@ -4,17 +4,7 @@
 ### Tech stack used:
 React, Node, Express, Gemini AI
 
-# Features
-
-## FAQ Model
-### Dynamic Language Support:
-1. Supports any language code (e.g., es, fr, hi). You can include more languages by just simply adding the language code in environmental variables or in configuration file.
-2. Base language: English (en) is required. You can change the base language through configuration file.
-3. Additional languages is added to database automatically through translation API
-
 ### API
-1. Supports language selection via ?lang= query parameter. If the provided language is not available in configuration file, the selected language fallbacks to base language.
-2. Additional languages are automatically added with post method.
    
     Method | API | Request | Response 
    --- | --- | --- | --- |
