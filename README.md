@@ -64,6 +64,7 @@ React, Node, Express, Gemini AI
 Note: The backend is hosted on free render service which goes in sleep mode after 30 minutes. It will take about 1-2 minutes when making a request for the first time in a while.
 
 * The dashboard is only supported in desktop mode as I have not worked on the responsiveness of frontend for now.
+* Gemini API might be not generating the expected output. OpenAI doesn't provide any free API keys, so I couldn't test it on it.
 
 
 <img width="1210" alt="Screenshot 2025-02-04 at 3 52 02 AM" src="https://github.com/user-attachments/assets/122cd50a-6059-4afe-a81f-845645bbdead" />
