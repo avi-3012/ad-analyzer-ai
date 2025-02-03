@@ -27,6 +27,7 @@ const analyzeWithLangChain = async (keywords) => {
 
     try {
         console.log("Calling LangChain...");
+        console.log("Prompt:", keywords[0]);
         const response = await model.invoke([
             [
                 "system",
