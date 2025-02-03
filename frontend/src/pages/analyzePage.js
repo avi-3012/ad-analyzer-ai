@@ -13,9 +13,12 @@ const AnalyzePage = () => {
     const analyzeFile = async () => {
       try {
         const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/analyze`);
+        if (response?.data?.analysis==="error"){
+            throw new Error("Analysis failed.");
+        }
         setAnalysis(response?.data?.analysis);
       } catch (error) {
-        alert("Analysis failed.");
+        alert("Error ocurred on LLM's side.");
         console.error(error);
       } finally {
         setLoading(false);
