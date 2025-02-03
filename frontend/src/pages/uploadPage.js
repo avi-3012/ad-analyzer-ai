@@ -23,7 +23,7 @@ const UploadPage = () => {
     setUploading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/api/upload", formData);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/upload`, formData);
       if (response.status !== 200) {
         throw new Error("Upload failed.");
       }

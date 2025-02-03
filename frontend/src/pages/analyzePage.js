@@ -12,7 +12,7 @@ const AnalyzePage = () => {
   useEffect(() => {
     const analyzeFile = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/analyze");
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/analyze`);
         setAnalysis(response?.data?.analysis);
       } catch (error) {
         alert("Analysis failed.");
