@@ -1,3 +1,4 @@
+const { SystemMessage, HumanMessage } = require("@langchain/core/messages");
 const { ChatGoogleGenerativeAI } = require("@langchain/google-genai");
 
 const model = new ChatGoogleGenerativeAI({
@@ -29,17 +30,9 @@ const analyzeWithLangChain = async (keywords) => {
         console.log("Calling LangChain...");
         console.log("Prompt:", keywords[0]);
         const response = await model.invoke([
-            [
-                "system",
-                prompt
-            ],
-            [
-                "human",
-                keywords
-            ]
+            new SystemMessage(prompt),
+            new HumanMessage(keywords),
         ]);
-        console.log("Analysis with LLM:", response);
-        console.log("Analysis complete.", prompt);
         return response;
     } catch (error) {
         console.error("Error analyzing with LLM:", error);

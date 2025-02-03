@@ -11,7 +11,7 @@ const analyzeData = async (req, res) => {
 
     try {
         console.log("Analyzing with LangChain...");
-        const analysisResult = await analyzeWithLangChain(adData);
+        const analysisResult = await analyzeWithLangChain(adData); 
         res.json({ analysis: analysisResult });
     } catch (error) {
         res.status(500).json({ error: "Error analyzing ads" });
